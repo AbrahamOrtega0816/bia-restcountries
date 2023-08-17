@@ -1,5 +1,5 @@
 import { expect, test, describe, beforeEach } from "vitest";
-import { render, renderHook } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import SwitchTheme from "@/components/navbar/components/SwitchTheme";
 
 describe("switchTheme", () => {

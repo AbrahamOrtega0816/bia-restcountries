@@ -8,7 +8,10 @@ const CountriesFilters = ({
   selectRegion: (newVal: SyntheticEvent) => void;
 }) => {
   return (
-    <div className="flex justify-between" id="filter-content">
+    <div
+      className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 place-content-between"
+      id="filter-content"
+    >
       <div className="form-control">
         <div className="input-group">
           <input
@@ -35,7 +38,7 @@ const CountriesFilters = ({
           </button>
         </div>
       </div>
-      <div>
+      <div className="sm:place-self-end">
         <select
           className="select select-bordered w-full max-w-xs"
           onChange={selectRegion}
