@@ -20,8 +20,9 @@ const SwitchTheme = () => {
   }, []);
 
   return (
-    <div className="flex-none">
+    <div className="flex-none" data-testid="switch-theme">
       <button
+        data-testid="btn-toggle-theme"
         className="btn btn-square btn-ghost"
         onClick={handleToggle}
         id="btn-toggle-theme"
@@ -38,7 +39,9 @@ const SwitchTheme = () => {
           height={32}
         />
       </button>
-      <span>{isMounted && theme === "dark" ? "Dark Mode" : "Light Mode"}</span>
+      <span data-testid="span-theme">
+        {isMounted && theme === "dark" ? "Dark Mode" : "Light Mode"}
+      </span>
     </div>
   );
 };

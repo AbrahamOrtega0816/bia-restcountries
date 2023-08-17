@@ -90,7 +90,12 @@ const CountriesDetail = () => {
   return (
     <div>
       <div className="flex w-full">
-        <Link href="/" className="detailPageBtn">
+        <Link
+          href="/"
+          className="detailPageBtn"
+          data-testid="action-back"
+          id="action-back"
+        >
           <div className="flex items-center gap-5">
             <Image
               src={"/images/backward.svg"}
@@ -111,7 +116,10 @@ const CountriesDetail = () => {
         </Link>
       </div>
       {isLoading && (
-        <div className="flex justify-center w-full mt-10">
+        <div
+          className="flex justify-center w-full mt-10"
+          data-testid="loading-spiner"
+        >
           <span className="loading loading-spinner loading-lg"></span>
         </div>
       )}
@@ -130,7 +138,7 @@ const CountriesDetail = () => {
               }}
             />
           </div>
-          <div className="countryInfo">
+          <div className="countryInfo" data-testid="country-innfo">
             <h2 className="font-bold text-3xl">{country?.name.common}</h2>
             <div className="flex gap-20 mt-10">
               <div className="flex flex-col gap-5">
